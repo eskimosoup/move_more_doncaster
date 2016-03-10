@@ -1,0 +1,43 @@
+<%= link_to '#', class: 'sidebar-item' do %>
+  <%= image_tag 'components/sidebar-items/activities.png',
+                alt: '', class: 'sidebar-item-img' %>
+
+  <div class="sidebar-item-chevron">
+    Local Activities
+  </div>
+<% end %>
+
+<%= link_to '#', class: 'sidebar-item' do %>
+  <%= image_tag 'components/sidebar-items/exercise.png',
+                alt: '', class: 'sidebar-item-img' %>
+
+  <div class="sidebar-item-chevron">
+    Exercise Booklet
+  </div>
+<% end %>
+
+<div class="sidebar-contact">
+  <h3>Contact Us</h3>
+
+  <ul class="sidebar-listings">
+    <%= content_tag :li, global_site_settings['Telephone'] if global_site_settings['Telephone'].present? %>
+    <%= content_tag :li, (mail_to global_site_settings['Email']) if global_site_settings['Email'].present? %>
+  </ul>
+
+  <h3>Opening Hours</h3>
+
+  <% present @opening_hours do |additional_content_presenter| %>
+    <%= additional_content_presenter.content %>
+  <% end %>
+
+  <ul class="sidebar-listings">
+    <% if global_site_settings['Facebook'].present? %>
+      <li>
+        <%= link_to global_site_settings['Facebook'] do %>
+          Visit our Facebook page
+          <%= image_tag 'components/social-media/facebook.png', alt: 'Facebook' %>
+        <% end %>
+      </li>
+    <% end %>
+  </ul>
+</div>

@@ -1,0 +1,41 @@
+.primary-navigation {
+  bottom: 0;
+  position: absolute;
+  text-align: center;
+  width: 100%;
+}
+
+.primary-navigation-links {
+  background: $primary-blue;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  display: inline-block;
+  padding: rem(12px);
+
+  li {
+    display: inline-block;
+    list-style: none;
+
+    &:last-of-type a {
+      border-right: 0;
+    }
+  }
+
+  a {
+    &:link,
+    &:visited {
+      border-right: 2px solid $white;
+      color: $white;
+      display: block;
+      font-family: $mentone;
+      font-size: rem(14px);
+      line-height: 1;
+      padding: 0 rem(15px);
+    }
+
+    &:hover,
+    &:active {
+      text-decoration: underline;
+    }
+  }
+}

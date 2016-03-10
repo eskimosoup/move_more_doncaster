@@ -24,6 +24,8 @@
       </div>
 
       <ul id="modules" class="content-category-list">
+<%= module_link(content: "Additional Contents", model: AdditionalContent, path: additional_contents_path) %>
+<%= module_link(content: "Home Page Contents", model: HomePageItem, path: home_page_items_path) %>
 <%= module_link(content: 'Pages', model: Page, path: pages_path) %>
         <% if can? :manage, Optimadmin::MenuItem %>
           <li><%= link_to 'Site Navigation', menu_items_path %></li>

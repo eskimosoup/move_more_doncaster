@@ -1,0 +1,26 @@
+.home-page-item-title {
+  color: $white;
+  font-size: rem(14px);
+  font-weight: $open-sans-extrabold;
+  padding: rem(11px) rem(17px);
+
+  $colour-names: purple yellow blue red;
+  $colour-vars: $purple $yellow $secondary-blue $red;
+  @each $colour in $colour-names {
+    $i: index($colour-names, $colour);
+
+    &.#{$colour} {
+      background: nth($colour-vars, $i);
+    }
+  }
+}
+
+.home-page-item-content {
+  margin: 0 auto rem(28px);
+
+  p {
+    font-size: rem(14px);
+    margin: rem(14px) rem(17px);
+    padding: 0;
+  }
+}
