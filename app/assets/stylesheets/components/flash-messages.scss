@@ -1,8 +1,8 @@
-$notice: $dark-green;
-$error: $pink;
-$alert: $error;
+$notice: $primary-green;
+$error: $red;
+$alert: $red;
 $text-color: $white;
-$border-color: $brown;
+$border-color: $yellow;
 
 %flash-heading {
   font-weight: normal;
@@ -12,9 +12,11 @@ $border-color: $brown;
 .flash-message {
   border: 1px solid $border-color;
   color: $text-color;
-  font-size: rem-calc(16px);
-  padding: rem-calc(5px);
-  margin: 0 0 rem-calc(20px);
+  font-family: $mentone;
+  font-size: rem(22px);
+  font-weight: $mentone-bold;
+  margin: 0 0 rem(10px);
+  padding: rem(7px);
 
   h2 {
     @extend %flash-heading;
