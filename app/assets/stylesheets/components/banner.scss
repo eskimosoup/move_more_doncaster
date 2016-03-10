@@ -47,9 +47,9 @@
   &:hover {
     background: $yellow;
   }
+}
 
-  .button-chevron {
-    background: image-url('components/icons/button-chevron.png') no-repeat center right;
-    padding-right: rem(18px);
-  }
+.button-chevron {
+  background: image-url('components/icons/button-chevron.png') no-repeat center right;
+  padding-right: rem(18px);
 }
