@@ -1,0 +1,11 @@
+<div class="home-page-item">
+  <% present home_page_item do |home_page_item_presenter| %>
+    <div class="home-page-item-title <%= home_page_item_presenter.colour %>">
+      <%= home_page_item_presenter.title %>
+    </div>
+
+    <div class="home-page-item-content">
+      <%= home_page_item_presenter.content %>
+    </div>
+  <% end %>
+</div>

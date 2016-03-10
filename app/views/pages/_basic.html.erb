@@ -1,0 +1,24 @@
+<div class="banner">
+  <div class="banner-content">
+    <% present @page do |page_presenter| %>
+      <h1>
+        <%= page_presenter.title %>
+      </h1>
+    <% end %>
+  </div>
+
+  <%= image_tag 'components/banner/primary-background.png',
+                alt: '', class: 'referral-banner '%>
+</div>
+
+<div class="page">
+  <div class="content">
+    <% present @page do |page_presenter| %>
+      <%= page_presenter.content %>
+    <% end %>
+  </div>
+
+  <div class="sidebar">
+    <%= render 'shared/sidebar' %>
+  </div>
+</div>

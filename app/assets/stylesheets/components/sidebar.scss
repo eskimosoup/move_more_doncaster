@@ -1,0 +1,65 @@
+.sidebar {
+  @include grid-column(4);
+}
+
+.sidebar-item {
+  &:link,
+  &:visited {
+    border-top: 2px solid $primary-blue;
+    color: $white;
+    display: block;
+    font-family: $mentone;
+    font-size: rem(14px);
+    height: 152px;
+    margin: 0 0 rem(20px);
+    position: relative;
+    width: 200px;
+  }
+
+  &:hover,
+  &:active {
+    border-top-color: $secondary-blue;
+    text-decoration: underline;
+  }
+}
+
+.sidebar-item-img {
+  position: absolute;
+  top: 0;
+  z-index: 1;
+}
+
+.sidebar-item-chevron {
+  background: image-url('components/icons/button-chevron.png') no-repeat center right;
+  bottom: 9px;
+  margin: 0 rem(9px);
+  padding: 0 rem(18px);
+  position: absolute;
+  width: 180px;
+  z-index: 2;
+}
+
+.sidebar-contact {
+  color: $primary-blue;
+  font-family: $mentone;
+  font-size: rem(14px);
+  max-width: 200px;
+  text-align: center;
+
+  h3 {
+    font-size: rem(16px);
+    font-weight: 400;
+  }
+
+  a:hover {
+    text-decoration: underline;
+  }
+
+  ul,
+  .sidebar-listings {
+    border-bottom: 2px solid $primary-blue;
+    list-style: none;
+    margin: 0 0 rem(14px);
+    padding: 0 0 rem(14px);
+  }
+}

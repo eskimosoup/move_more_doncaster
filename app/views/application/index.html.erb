@@ -1,0 +1,26 @@
+<div class="banner">
+  <div class="banner-content">
+    <% present @banner_text do |additional_content_presenter| %>
+      <%= additional_content_presenter.content %>
+    <% end %>
+
+    <%= link_to '/pages/how-to-make-a-referral', class: 'referral-button' do %>
+      <span class="button-chevron">
+        How to make a referral
+      </span>
+    <% end %>
+  </div>
+
+  <%= image_tag 'components/banner/primary-background.png',
+                alt: '', class: 'referral-banner '%>
+</div>
+
+<div class="page">
+  <div class="content">
+    <%= render @home_page_item %>
+  </div>
+
+  <div class="sidebar">
+    <%= render 'shared/sidebar' %>
+  </div>
+</div>

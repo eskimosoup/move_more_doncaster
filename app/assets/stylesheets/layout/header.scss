@@ -1,0 +1,24 @@
+.primary-header-wrap {
+  border-bottom: 4px solid $primary-blue;
+}
+
+.primary-header {
+  @include grid-row;
+  padding: rem(24px) 0 0;
+  position: relative;
+}
+
+.logo {
+  @include grid-column(2);
+  background: image-url('layout/header/logo.png') no-repeat;
+  height: 83px;
+  text-indent: -9999px;
+}
+
+.swyt {
+  @include grid-column(3);
+  background: image-url('layout/header/swyt.png') no-repeat top right;
+  height: 25px;
+  text-indent: -9999px;
+  margin: rem(15px) 0 0;
+}

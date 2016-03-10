@@ -1,0 +1,55 @@
+.banner {
+  background: image-url('components/banner/tilable-bg.png') repeat-x;
+  min-height: 286px;
+  position: relative;
+  text-align: center;
+  margin: 0 0 rem(26px);
+}
+
+.banner-content {
+  @include grid-row;
+  position: relative;
+  top: 0;
+  z-index: 2;
+
+  h1 {
+    color: $primary-blue;
+    font-family: $mentone;
+    font-size: rem(15px);
+    font-weight: $mentone-bold;
+    line-height: 1.5;
+    margin: rem(30px) auto;
+    width: grid-column(5);
+  }
+}
+
+.referral-banner {
+  left: 50%;
+  margin-left: -604px;
+  position: absolute;
+  top: 0;
+  z-index: 1;
+}
+
+.referral-button {
+  &:link,
+  &:visited {
+    @include border-radius(26px);
+    background: $primary-green;
+    color: $white;
+    display: inline-block;
+    font-family: $mentone;
+    font-size: rem(14px);
+    padding: rem(12px) rem(36px);
+  }
+
+  &:active,
+  &:hover {
+    background: $yellow;
+  }
+
+  .button-chevron {
+    background: image-url('components/icons/button-chevron.png') no-repeat center right;
+    padding-right: rem(18px);
+  }
+}
