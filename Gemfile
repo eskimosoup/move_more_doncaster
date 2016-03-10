@@ -1,6 +1,5 @@
 source 'https://rubygems.org'
 
-
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.5.2'
 # Use postgresql as the database for Active Record
@@ -45,7 +44,6 @@ group :development do
   # gem 'spring'
 end
 
-
 group :development, :test do
   gem 'rspec-rails', '~> 3.0'
   gem 'factory_girl_rails', '~> 4.5.0'
@@ -58,6 +56,7 @@ group :test do
   gem 'launchy', '~> 2.4.3'
   gem 'selenium-webdriver'
   gem 'simplecov', require: false
+  gem 'shoulda-callback-matchers', '~> 1.1.1'
 end
 
 group :development do
