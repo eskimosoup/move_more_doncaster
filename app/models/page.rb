@@ -36,7 +36,7 @@ class Page < ActiveRecord::Base
   end
 
   def self.styles
-    %w( basic )
+    %w( basic contact_us )
   end
 
   def store_image
