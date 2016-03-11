@@ -3,6 +3,7 @@ require 'rails_helper'
 RSpec.describe AdditionalContent, type: :model, additional_content: true do
   describe 'validations', :validation do
     subject(:additional_content) { build(:additional_content) }
+    it { should validate_presence_of(:title) }
     it { should validate_presence_of(:content) }
     it { should validate_inclusion_of(:area).in_array(AdditionalContent::AREAS) }
     it { should validate_uniqueness_of(:area) }

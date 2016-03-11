@@ -28,7 +28,7 @@
     <%= content_tag :li, (mail_to global_site_settings['Email']) if global_site_settings['Email'].present? %>
   </ul>
 
-  <h3>Opening Hours</h3>
+  <%= content_tag :h3, 'Opening Hours' if @opening_hours.present? %>
 
   <% present @opening_hours do |additional_content_presenter| %>
     <%= additional_content_presenter.content %>
