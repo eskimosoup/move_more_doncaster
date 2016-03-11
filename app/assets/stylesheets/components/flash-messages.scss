@@ -5,11 +5,13 @@ $text-color: $white;
 $border-color: $yellow;
 
 %flash-heading {
+  color: $white;
+  font-size: rem(16px);
   font-weight: normal;
 }
 
 // Flash
-.flash-message {
+%flash-message {
   border: 1px solid $border-color;
   color: $text-color;
   font-family: $mentone;
@@ -17,6 +19,10 @@ $border-color: $yellow;
   font-weight: $mentone-bold;
   margin: 0 0 rem(10px);
   padding: rem(7px);
+}
+
+.flash-message {
+  @extend %flash-message;
 
   h2 {
     @extend %flash-heading;
@@ -44,11 +50,16 @@ $border-color: $yellow;
 
 .error_messages,
 #error_explanation {
+  @extend %flash-message;
+  background: $error;
+  font-weight: bold;
+
   h2 {
     @extend %flash-heading;
   }
 
   ul {
     font-weight: normal;
+    font-size: rem(14px);
   }
 }

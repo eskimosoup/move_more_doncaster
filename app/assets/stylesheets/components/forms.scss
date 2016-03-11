@@ -1,0 +1,29 @@
+.contact-details {
+  @include grid-row;
+
+  .field {
+    @include grid-column(4);
+
+    &:first-of-type {
+      padding-left: 0;
+    }
+
+    &:last-of-type {
+      padding-right: 0;
+    }
+  }
+}
+
+input[type='submit'] {
+  @include border-radius(26px);
+  background: $primary-blue;
+  border: 0;
+  color: $white;
+  font-family: $mentone;
+  font-size: rem(14px);
+  padding: rem(12px) rem(36px);
+
+  &:hover {
+    background: $secondary-blue;
+  }
+}

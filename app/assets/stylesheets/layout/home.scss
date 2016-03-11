@@ -2,11 +2,3 @@ html,
 body {
   box-sizing: border-box;
 }
-
-.page {
-  @include grid-row;
-}
-
-.content {
-  @include grid-column(8);
-}

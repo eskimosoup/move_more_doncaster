@@ -1,0 +1,9 @@
+<p>
+  <strong>Name</strong> <%= @contact.forename %> <%= @contact.surname %>
+</p>
+
+<p>
+  <strong>Email</strong> <%= mail_to @contact.email %>
+</p>
+
+<%= simple_format "<strong>Message</strong><br/>" + @contact.message %>

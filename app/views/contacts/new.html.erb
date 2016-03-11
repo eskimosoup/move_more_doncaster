@@ -1,0 +1,32 @@
+<div class="banner">
+  <div class="banner-content">
+    <% present @additional_content do |additional_content_presenter| %>
+      <h1>
+        <%= additional_content_presenter.title %>
+      </h1>
+    <% end %>
+  </div>
+
+  <%= image_tag 'components/banner/primary-background.png',
+                alt: '', class: 'referral-banner '%>
+</div>
+
+<div class="page">
+  <div class="content">
+    <%= render 'shared/flash_messages' %>
+
+    <% present @additional_content do |additional_content_presenter| %>
+      <h1>
+        <%= additional_content_presenter.title %>
+      </h1>
+
+      <%= additional_content_presenter.content %>
+    <% end %>
+
+    <%= render 'form' %>
+  </div>
+
+  <div class="sidebar">
+    <%= render 'shared/sidebar' %>
+  </div>
+</div>
