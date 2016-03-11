@@ -37,5 +37,9 @@
     &:active {
       text-decoration: underline;
     }
+
+    &.active {
+      font-weight: $mentone-bold;
+    }
   }
 }
