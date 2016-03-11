@@ -6,6 +6,7 @@ RSpec.describe AdditionalContent, type: :model, additional_content: true do
     it { should validate_presence_of(:content) }
     it { should validate_inclusion_of(:area).in_array(AdditionalContent::AREAS) }
     it { should validate_uniqueness_of(:area) }
+    it { should validate_presence_of(:area) }
   end
 
   describe 'scopes', :scope do

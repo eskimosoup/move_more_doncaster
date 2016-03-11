@@ -68,6 +68,14 @@ Rails.application.routes.draw do
   #   end
 end
 Optimadmin::Engine.routes.draw do
+  resources :buttons, except: [:show] do
+    collection do
+      post 'order'
+    end
+    member do
+      get 'toggle'
+    end
+  end
   resources :additional_contents, except: [:show] do
     collection do
       post 'order'

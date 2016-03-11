@@ -5,6 +5,7 @@ RSpec.describe HomePageItem, type: :model, home_page_item: true do
     subject(:home_page_item) { build(:home_page_item) }
     it { should validate_presence_of(:title) }
     it { should validate_presence_of(:content) }
+    it { should validate_presence_of(:colour) }
     it { should validate_inclusion_of(:colour).in_array(HomePageItem::COLOURS) }
   end
 

@@ -1,19 +1,23 @@
-<%= link_to '#', class: 'sidebar-item' do %>
-  <%= image_tag 'components/sidebar-items/activities.png',
-                alt: '', class: 'sidebar-item-img' %>
+<% present @sidebar_item_1 do |button_presenter| %>
+  <%= link_to button_presenter.link_url, class: 'sidebar-item' do %>
+    <%= image_tag 'components/sidebar-items/activities.png',
+                  alt: '', class: 'sidebar-item-img' %>
 
-  <div class="sidebar-item-chevron">
-    Local Activities
-  </div>
+    <div class="sidebar-item-chevron">
+      <%= button_presenter.link_text %>
+    </div>
+  <% end %>
 <% end %>
 
-<%= link_to '#', class: 'sidebar-item' do %>
-  <%= image_tag 'components/sidebar-items/exercise.png',
-                alt: '', class: 'sidebar-item-img' %>
+<% present @sidebar_item_2 do |button_presenter| %>
+  <%= link_to button_presenter.link_url, class: 'sidebar-item' do %>
+    <%= image_tag 'components/sidebar-items/exercise.png',
+                  alt: '', class: 'sidebar-item-img' %>
 
-  <div class="sidebar-item-chevron">
-    Exercise Booklet
-  </div>
+    <div class="sidebar-item-chevron">
+      <%= button_presenter.link_text %>
+    </div>
+  <% end %>
 <% end %>
 
 <div class="sidebar-contact">

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160310155701) do
+ActiveRecord::Schema.define(version: 20160311114520) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -26,6 +26,17 @@ ActiveRecord::Schema.define(version: 20160310155701) do
   end
 
   add_index "additional_contents", ["area"], name: "index_additional_contents_on_area", using: :btree
+
+  create_table "buttons", force: :cascade do |t|
+    t.string   "area",                      null: false
+    t.string   "link_text",                 null: false
+    t.string   "link_url",                  null: false
+    t.boolean  "display",    default: true
+    t.datetime "created_at",                null: false
+    t.datetime "updated_at",                null: false
+  end
+
+  add_index "buttons", ["area"], name: "index_buttons_on_area", using: :btree
 
   create_table "friendly_id_slugs", force: :cascade do |t|
     t.string   "slug",                      null: false
