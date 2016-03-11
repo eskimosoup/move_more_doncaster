@@ -22,6 +22,7 @@ class ApplicationController < ActionController::Base
   def index
     @home_page_item = HomePageItem.displayed
     @banner_text = @additional_contents.find_by(area: 'banner_text')
+    @banner_button = @buttons.find_by(area: 'banner')
   end
 
   private
@@ -33,6 +34,9 @@ class ApplicationController < ActionController::Base
 
   def objects
     @additional_contents = AdditionalContent.displayed
+    @buttons = Button.displayed
+    @sidebar_item_1 = @buttons.find_by(area: 'sidebar_item_1')
+    @sidebar_item_2 = @buttons.find_by(area: 'sidebar_item_2')
     @opening_hours = @additional_contents.find_by(area: 'opening_hours')
     @header_menu = Optimadmin::Menu.new(name: 'header')
   end

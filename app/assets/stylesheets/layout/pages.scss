@@ -1,0 +1,11 @@
+.page {
+  @include grid-row;
+}
+
+.content {
+  @include grid-column(8);
+
+  h1 {
+    margin-top: 0;
+  }
+}

@@ -4,10 +4,9 @@
       <%= additional_content_presenter.content %>
     <% end %>
 
-    <%= link_to '/pages/how-to-make-a-referral', class: 'referral-button' do %>
-      <span class="button-chevron">
-        How to make a referral
-      </span>
+
+    <% present @banner_button do |button_presenter| %>
+      <%= button_presenter.linked_text("<span class='button-chevron'>#{button_presenter.link_text}</span>".html_safe, class: 'referral-button') %>
     <% end %>
   </div>
 
@@ -18,7 +17,7 @@
 <div class="page">
   <div class="content">
     <%= render 'shared/flash_messages' %>
-    
+
     <%= render @home_page_item %>
   </div>
 
