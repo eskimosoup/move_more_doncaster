@@ -2,13 +2,21 @@
   @include grid-row;
 
   .field {
-    @include grid-column(4);
+
+    &.small {
+      @include grid-column(2);
+    }
+
+    &.large {
+      @include grid-column(4);
+    }
 
     &:first-of-type {
       padding-left: 0;
     }
 
     &:last-of-type {
+      @include grid-column-end;
       padding-right: 0;
     }
   }

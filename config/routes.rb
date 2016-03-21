@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
+  resources :referrals, only: [:new, :create]
+
   resources :pages, only: :show
-  resources :contacts, only: [:new, :create]
+  # resources :contacts, only: [:new, :create]
 
   %w( 403 404 422 500 ).each do |code|
     get code, to: 'errors#show', code: code
