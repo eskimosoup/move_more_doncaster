@@ -35,6 +35,12 @@
   <% end %>
 
   <ul class="sidebar-listings">
+    <li>
+      <%= link_to 'Make a referral', new_referral_path %>
+    </li>
+  </ul>
+
+  <ul class="sidebar-listings">
     <% if global_site_settings['Facebook'].present? %>
       <li>
         <%= link_to global_site_settings['Facebook'] do %>
