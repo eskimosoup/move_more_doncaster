@@ -4,14 +4,20 @@
   font-weight: $open-sans-extrabold;
   padding: rem(11px) rem(17px);
 
-  $colour-names: purple yellow blue red;
-  $colour-vars: $purple $yellow $secondary-blue $red;
-  @each $colour in $colour-names {
-    $i: index($colour-names, $colour);
+  &.purple {
+    background: $purple;
+  }
 
-    &.#{$colour} {
-      background: nth($colour-vars, $i);
-    }
+  &.yellow {
+    background: $yellow;
+  }
+
+  &.red {
+    background: $red;
+  }
+
+  &.blue {
+    background: $secondary-blue;
   }
 }
 
