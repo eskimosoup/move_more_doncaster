@@ -2,6 +2,10 @@
   border-bottom: 4px solid $primary-blue;
 }
 
+.ie8 .primary-header-wrap {
+  height: 107px;
+}
+
 .primary-header {
   @include grid-row;
   padding: rem(24px) 0 0;
