@@ -25,7 +25,7 @@
 
   <ul class="sidebar-listings">
     <%= content_tag :li, global_site_settings['Telephone'] if global_site_settings['Telephone'].present? %>
-    <%= content_tag :li, (mail_to global_site_settings['Email']) if global_site_settings['Email'].present? %>
+    <%= content_tag :li, (mail_to global_site_settings['Email'], 'Email') if global_site_settings['Email'].present? %>
   </ul>
 
   <%= content_tag :h3, 'Opening Hours' if @opening_hours.present? %>
