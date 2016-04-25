@@ -5,6 +5,11 @@
   width: 100%;
 }
 
+.ie8 .primary-navigation {
+  height: 40px;
+  top: 53px;
+}
+
 .primary-navigation-links {
   background: $primary-blue;
   border-top-left-radius: 10px;
