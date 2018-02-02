@@ -9,14 +9,21 @@ Rails.application.configure do
   #  arguments: '-i'
   # }
 
-  config.action_mailer.smtp_settings = { enable_starttls_auto: false }
+  #config.action_mailer.smtp_settings = { enable_starttls_auto: false }
 
   ActionMailer::Base.delivery_method = :smtp
+  #ActionMailer::Base.smtp_settings = {
+  #  address: 'mail.optimised.today',
+  #  authentication: :plain,
+  #  user_name: 'noreply@optimised.today',
+  #  password: ENV['NOREPLY_PASSWORD']
+  #}
+
   ActionMailer::Base.smtp_settings = {
-    address: 'mail.optimised.today',
-    authentication: :plain,
-    user_name: 'noreply@optimised.today',
-    password: ENV['NOREPLY_PASSWORD']
+    address: 'wearemy-co-uk.mail.protection.outlook.com',
+    domain: 'wearemy.co.uk',
+    port: 25,
+    enable_starttls_auto: true
   }
 
   # Settings specified here will take precedence over those in config/application.rb.
