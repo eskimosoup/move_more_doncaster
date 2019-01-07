@@ -39,6 +39,13 @@
       <%= f.text_area :additional_information, placeholder: 'Optional useful information' %>
     </div>
   </div>
+  <div class="field">
+    <%= f.check_box :privacy_policy, required: true %>
+    <%= f.label :privacy_policy, "I agree to the #{link_to 'privacy policy', '/pages/privacy-policy'}.".html_safe %>
+  </div>
+
+  <div class="field">
+  </div>
   <div class="actions">
     <%= f.submit "Send", class: "submit-button" %>
   </div>
