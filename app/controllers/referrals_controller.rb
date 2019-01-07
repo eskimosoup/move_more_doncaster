@@ -19,7 +19,7 @@ class ReferralsController < ApplicationController
 
   def referral_params
     params.require(:referral)
-          .permit(:title, :name, :address, :contact_method_details, :additional_information, :date_of_birth)
+          .permit(:title, :name, :address, :contact_method_details, :additional_information, :date_of_birth, :privacy_policy)
   end
 
   def referral_content
