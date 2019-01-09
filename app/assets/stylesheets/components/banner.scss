@@ -1,9 +1,12 @@
 .banner {
   background: image-url('components/banner/tilable-bg.png') repeat-x;
-  min-height: 286px;
   position: relative;
   text-align: center;
   margin: 0 0 rem(26px);
+
+  @include breakpoint(large) {
+    min-height: 286px;
+  }
 }
 
 .banner-content {
@@ -19,17 +22,26 @@
     font-weight: $mentone-bold;
     line-height: 1.5;
     padding: rem(30px) 0;
-    margin: 0 auto;
-    width: grid-column(5);
+
+    @include breakpoint(large) {
+      margin: 0 auto;
+      width: grid-column(5);
+    }
+  }
+
+  .referral-button {
+    margin-bottom: rem(20px);
   }
 }
 
 .referral-banner {
-  left: 50%;
-  margin-left: -604px;
-  position: absolute;
-  top: 0;
-  z-index: 1;
+  @include breakpoint(large) {
+    left: 50%;
+    margin-left: -604px;
+    position: absolute;
+    top: 0;
+    z-index: 1;
+  }
 }
 
 .referral-button {

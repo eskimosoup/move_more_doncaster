@@ -1,5 +1,12 @@
 .sidebar {
-  @include grid-column(4);
+  @include breakpoint(medium down) {
+    @include grid-column(12);
+    margin-top: rem(50px);
+  }
+
+  @include breakpoint(large) {
+    @include grid-column(4);
+  }
 }
 
 .sidebar-item {

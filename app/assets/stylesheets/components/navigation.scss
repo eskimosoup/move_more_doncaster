@@ -1,8 +1,10 @@
 .primary-navigation {
-  bottom: 0;
-  position: absolute;
-  text-align: center;
-  width: 100%;
+  @include breakpoint(large) {
+    bottom: 0;
+    position: absolute;
+    text-align: center;
+    width: 100%;
+  }
 }
 
 .ie8 .primary-navigation {
@@ -12,30 +14,52 @@
 
 .primary-navigation-links {
   background: $primary-blue;
-  border-top-left-radius: 10px;
-  border-top-right-radius: 10px;
-  display: inline-block;
-  padding: rem(12px);
+
+  @include breakpoint(medium down) {
+    clear: left;
+  }
+
+  @include breakpoint(large) {
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    display: inline-block;
+    padding: rem(12px);
+  }
 
   li {
     display: inline-block;
     list-style: none;
 
+    @include breakpoint(medium down) {
+      width: 49%;
+    }
+
     &:last-of-type a {
-      border-right: 0;
+      @include breakpoint(large) {
+        border-right: 0;
+      }
     }
   }
 
   a {
     &:link,
     &:visited {
-      border-right: 2px solid $white;
       color: $white;
       display: block;
       font-family: $mentone;
       font-size: rem(14px);
       line-height: 1;
       padding: 0 rem(15px);
+
+      @include breakpoint(medium down) {
+        padding-bottom: rem(15px);
+        padding-top: rem(15px);
+        text-align: center;
+      }
+
+      @include breakpoint(large) {
+        border-right: 2px solid $white;
+      }
     }
 
     &:hover,

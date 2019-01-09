@@ -3,7 +3,13 @@
 }
 
 .content {
-  @include grid-column(8);
+  @include breakpoint(medium down) {
+    @include grid-column(12);
+  }
+
+  @include breakpoint(large) {
+    @include grid-column(8);
+  }
 
   h1 {
     margin-top: 0;

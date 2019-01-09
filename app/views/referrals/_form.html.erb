@@ -1,3 +1,10 @@
+<%= content_for :head do %>
+  <script>
+    $(document).on('click', '.referral-submissions-button', function(e) {
+      fbq('track', 'CompleteRegistration');
+    });
+  </script>
+<% end %>
 <%= form_for @referral, url: referrals_path do |f| %>
   <% if @referral.errors.any? %>
     <div id="error_explanation">
@@ -47,6 +54,6 @@
   <div class="field">
   </div>
   <div class="actions">
-    <%= f.submit "Send", class: "submit-button" %>
+    <%= f.submit "Send", class: "submit-button referral-submissions-button" %>
   </div>
 <% end %>
