@@ -4,11 +4,15 @@
   .field {
 
     &.small {
-      @include grid-column(2);
+      @include breakpoint(large) {
+        @include grid-column(2);
+      }
     }
 
     &.large {
-      @include grid-column(4);
+      @include breakpoint(large) {
+        @include grid-column(4);
+      }
     }
 
     &:first-of-type {
@@ -16,8 +20,10 @@
     }
 
     &:last-of-type {
-      @include grid-column-end;
-      padding-right: 0;
+      @include breakpoint(large) {
+        @include grid-column-end;
+        padding-right: 0;
+      }
     }
   }
 }
